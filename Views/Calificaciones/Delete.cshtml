@@ -1,0 +1,56 @@
+﻿@model WebNotas_ASP.NETv01.Models.Calificacion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Calificacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Acumulado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acumulado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProyectoFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProyectoFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiante.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estudiante.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignatura.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asignatura.Codigo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
